@@ -12,7 +12,7 @@ with open('transformer.pkl','rb') as file:
 
 def prediction(input_list):
    
-
+    tran_data = pt.transform([[input_list[0]
     pred = model.predict_proba([input_list])[:,1][0]
 
     if pred>0.5:
